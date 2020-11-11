@@ -33,6 +33,13 @@ const signInSuccess = function (response) {
   
   const signOutSuccess = function (response) {
       $('#alert-msg').text('Sign Out Successful!')
+      $('#sign-up-form').show()
+      $('#sign-in').show()
+      $('#sign-out').hide()
+      $('#productive-landing').hide()
+
+
+
   }
     
     

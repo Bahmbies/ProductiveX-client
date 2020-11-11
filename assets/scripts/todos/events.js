@@ -1,5 +1,6 @@
 const ui = require('./ui')
 const api = require('./api')
+
 const getFormFields = require('../../../lib/get-form-fields')
 
 const onCreateTodo = (event) => {
@@ -23,8 +24,15 @@ const onIndexTodo = (event) => {
 
 const onDeleteTodo = (event) => {
     event.preventDefault()
+    console.log('event.target: ', event.target)
+    const todoId = event.target
 
-    api.delete(data)
+
+    
+
+    console.log('todoId: ', todoId)
+
+    api.deleteTodo()
          .then(ui.deleteSuccess)
         .catch(ui.deleteFailed)
 }

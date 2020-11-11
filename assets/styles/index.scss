@@ -16,7 +16,7 @@ body {
      font-size: 65px;
     text-align: center;
 }
-#alert-msg, #sign-up-msg, #sign-in-msg, #password-change-msg, #games-played {
+#alert-msg, #sign-up-msg, #sign-in-msg, #password-change-msg {
     font-family: 'Shrikhand', cursive;
     letter-spacing: .15em;
     text-shadow: 1px -1px 0 grey, -1px 2px 1px wheat, -2px 4px 1px lightgrey, -4px 8px 1px #7b7a7a, -9px 18px 1px black, -4px 8px 1px #7b7a7a, -4px 8px 1px #7b7a7a;
@@ -26,7 +26,7 @@ body {
     text-align: center;
     }
 
-.sign-in-input, .sign-up-input, .password-change-input {
+.sign-in-input, .sign-up-input, .password-change-input, .todos-landing-input {
         text-align: center;
     }
 
@@ -52,4 +52,33 @@ input[type="submit"] {
     font-size: 20px;
     display: grid;
     text-align: center;
+}
+
+#landing-msg {
+    font-family: 'Shrikhand', cursive;
+    letter-spacing: .15em;
+    text-shadow: 1px -1px 0 grey, -1px 2px 1px wheat, -2px 4px 1px lightgrey, -4px 8px 1px #7b7a7a, -9px 18px 1px black, -4px 8px 1px #7b7a7a, -4px 8px 1px #7b7a7a;
+    color: #131313;
+    font-size: 45px;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+#todo-input {
+    background-color: black;
+    box-shadow: 2px 1px 2px white;
+    color: white;
+    size: 50px;
+    width: 650px;
+    
+}
+
+#add-btn {
+    box-shadow: 2px 1px 2px white;
+    color: whitesmoke;
+    background-color: black;   
+}
+
+.todos-landing-input {
+    position: relative;
 }

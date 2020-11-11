@@ -8,6 +8,7 @@
 const events = require('./auth/events')
 const todoEvents = require('./todos/events')
 
+
 $(() => {
   // your JS code goes here
   $('#sign-up-form').on('submit', events.onSignUp)
@@ -18,6 +19,7 @@ $(() => {
   $('#productive-landing').hide()
   $('#password-change').hide()
   $('#sign-out').hide()
-
-
+  $('#productive-landing').on('submit', todoEvents.onIndexTodo)
+ // $('#delete-btn').on('submit', todoEvents.onDeleteTodo)
+  $('body').on('click', '#todo-delete', todoEvents.onDeleteTodo)
 })
