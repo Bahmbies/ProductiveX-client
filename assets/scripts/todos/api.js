@@ -35,10 +35,23 @@ const deleteTodo = () => {
     })
 }
 
+const update = (data) => {
+    return $.ajax({
+        url: config.apiUrl + '/todos',
+        data: data,
+        method: 'PATCH',
+        headers: {
+            Authorization: 'Bearer ' + store.user.token 
+        }
+
+
+    })
+}
 
 
 module.exports = {
     create,
     index,
-    deleteTodo
+    deleteTodo,
+    update
 }

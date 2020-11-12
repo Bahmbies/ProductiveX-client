@@ -18,7 +18,9 @@ const indexSuccess = (response) => {
     
     // show all todos in list format with a delete and update option
         $("#alert-msg").text('Cool! Get To It!!')
+        $('#container').show()
         $('#container').html()
+        $('#container').data()
         const todos = response.todos
         console.log(response)
         todos.forEach(function (todo) {
@@ -56,6 +58,15 @@ const deleteFailed = () => {
 $('#alert-msg').text('Hmm.. Try Again')
 }
 
+const updateSuccess = (response) => {
+  $('#alert-msg').text('Updated!')
+  store.todo = response.todo
+}
+
+const updateFailed = () => {
+  $('#alert-msg').text('Failed to Update')
+}
+
   
   module.exports = {
       createSuccess,
@@ -63,5 +74,7 @@ $('#alert-msg').text('Hmm.. Try Again')
       indexSuccess,
       indexFailed,
       deleteSuccess,
-      deleteFailed
+      deleteFailed,
+      updateSuccess,
+      updateFailed
   }
