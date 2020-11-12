@@ -28,6 +28,7 @@ const indexSuccess = (response) => {
             <button id="todo-delete" type="button" data-todo_id=${todo._id}>Delete!</button>
           `)
           $('#container').append(todoHTML)
+          $('form').trigger('reset')
         })
       }
 

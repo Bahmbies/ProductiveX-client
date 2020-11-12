@@ -16,7 +16,7 @@ body {
      font-size: 65px;
     text-align: center;
 }
-#alert-msg, #sign-up-msg, #sign-in-msg, #password-change-msg {
+#alert-msg, #sign-up-msg, #sign-in-msg, #password-change-msg, #update-todo-msg {
     font-family: 'Shrikhand', cursive;
     letter-spacing: .15em;
     text-shadow: 1px -1px 0 grey, -1px 2px 1px wheat, -2px 4px 1px lightgrey, -4px 8px 1px #7b7a7a, -9px 18px 1px black, -4px 8px 1px #7b7a7a, -4px 8px 1px #7b7a7a;
@@ -26,12 +26,12 @@ body {
     text-align: center;
     }
 
-.sign-in-input, .sign-up-input, .password-change-input, .todos-landing-input {
+.sign-in-input, .sign-up-input, .password-change-input, .todos-landing-input, .update-todo-input {
         text-align: center;
     }
 
 
-input[type="email"], input[type="password"]  {
+input[type="email"], input[type="password"], input[type="text"] {
         background-color: black;
         box-shadow: 2px 1px 2px white;
         color: white;
@@ -81,4 +81,10 @@ input[type="submit"] {
 
 .todos-landing-input {
     position: relative;
+}
+
+#container {
+    font-family: 'Shrikhand', cursive;
+    color: wheat;
+
 }
