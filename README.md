@@ -6,7 +6,7 @@ I wanted to make an app that me and my sister could use to help plan our day and
 
 ### Wireframes
 
-![Productive X Wireframe X ERD](https://imgur.com/a/nqRPESK)
+[Productive X Wireframe X ERD](https://imgur.com/a/nqRPESK)
 
 ### User Stories
 * As an user, I want to create my own account.
