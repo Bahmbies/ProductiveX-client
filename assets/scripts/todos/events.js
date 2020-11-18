@@ -1,11 +1,12 @@
 const ui = require('./ui')
 const api = require('./api')
+const store = require('../store')
 
 const getFormFields = require('../../../lib/get-form-fields')
 
 const onCreateTodo = (event) => {
     event.preventDefault()
-
+console.log('im creating....')
     const form = event.target
     const data = getFormFields(form)
 
@@ -17,31 +18,43 @@ const onCreateTodo = (event) => {
 const onIndexTodo = (event) => {
     event.preventDefault()
 
+    
+
+    console.log('im Indexing...')
+
     api.index()
          .then(ui.indexSuccess)
          .catch(ui.indexFailed)
 }
 
-const onDeleteTodo = (event) => {
-    event.preventDefault()
-    console.log('event.target: ', event.target)
-    const todoId = event.target
-
-
+const showTodo = (event) => {
+    event.preventDefault
     
+    api.show()
+    .then(ui.showSuccess)
+    .catch(ui.showFailed)
+}
+
+const onDeleteTodo = (event) => {
+    console.log('event.target: ', event.target)
+    const todoId = $(event.target).data('todo-id')
+    
+    $('#container').empty(todoId)
 
     console.log('todoId: ', todoId)
 
-    api.deleteTodo()
+    api.deleteTodo(todoId)
          .then(ui.deleteSuccess)
         .catch(ui.deleteFailed)
+  
 }
 
 const onUpdateTodo = (event) => {
     event.preventDefault()
 
-    const form = event.target
-    const data = getFormFields(form)
+    const data = getFormFields(event.target)
+
+     const todoId = $(event.target).data('todo-id')
 
     api.update(data)
          .then(ui.updateSuccess)
@@ -53,5 +66,6 @@ module.exports = {
     onCreateTodo,
     onIndexTodo,
     onDeleteTodo,
-    onUpdateTodo
+    onUpdateTodo,
+    showTodo
 }
