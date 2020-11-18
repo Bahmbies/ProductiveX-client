@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>PRODUCTIVEX</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <!-- Do not add `link` tags-->
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+    
+    <!-- Do not add `script` tags-->
+    <script src="public/vendor.js" type="text/javascript" charset="utf-8" defer></script>
+    <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Shrikhand&display=swap');
+      </style>
+  </head>
+  
+  <body>
+  
+
+    
+    <div class="home-page-container">
+      <h1 class="header">PRODUCTIVE X </h1>
+      <p id="alert-msg"></p>
+      
+      
+      <form id="sign-in">
+        <legend id="sign-in-msg">Welcome Back!, Sign in </legend>
+        <div class="sign-in-input">
+          <label for="sign-in-email">Email
+            <input id="sign-in-email" type="email" name="credentials[email]" placeholder="Type Email Here">
+          </label>
+          
+          <label for="sign-in-password">Password
+            <input id="sign-in-password" type="password" name="credentials[password]" placeholder="Password">
+          </label>
+          
+          <input type="submit" value="Lets Go!">
+        </div>
+        
+
+      </form>
+          <form id="sign-up-form">
+            <fieldset>
+              <legend id="sign-up-msg"> Sign up!</legend>
+              <div class="sign-up-input">
+                <label for="sign-up-email">Email</label>
+                <input id="sign-up-email" type="email" name="credentials[email]" placeholder="Email">
+                <label for="sign-up-password">Password</label>
+                <input id="sign-up-password" type="password" name="credentials[password]" placeholder="Password">
+                <label for="sign-up-password_confirmation">Password Confirmation</label>
+                <input id="sign-up-password_confirmmation" type="password" name="credentials[password_confirmation]"
+                placeholder="Confirm Password">
+                <input type="submit" value="Sign up!">
+              </div>
+            </fieldset>
+          </form>
+          <br>
+          
+      <br>
+      <form id="productive-landing">
+        <div id="productive-landing">
+          <!-- <h1 class="header">PRODUCTIVE X </h1> -->
+          <p id="alert-msg"></p>
+          <legend id="landing-msg"> Plan Your Day</legend>
+          <div class="todos-landing-input">
+            <input id="todo-input" type="text"  name="todo[text]" placeholder="Prioritze Your Day">
+            <button id="add-btn" type="submit">+</button>
+              <div style="height:500px;width:100%;border:1px solid #ccc;font:16px/26px Georgia, Garamond, Serif;overflow:auto;" id="container"></div>
+              <button id="view-btn" type="click">VIEW ALL</button>
+            </div>
+          </form>
+         
+          <br>
+          <br>
+          
+          <form id="update-form">
+            <legend id="update-todo-msg">Update A Task</legend>
+            <div class="update-todo-input">
+                      <input type="text" name="todo[id]" placeholder="Enter Todo ID">
+                      <input type="text" name="todo[text]" placeholder="Enter NEW Todo">
+                      <input type="submit" value="Update">
+                    </div>
+                  </form>
+                  <br>
+                  <br>
+                  
+      <form id="password-change">
+        <legend id="password-change-msg">Change Ur Password</legend>
+        <div class="password-change-input">
+          <label for="change-password"> Old Password
+            <input type="password" name="passwords[old]" placeholder="Old Password">
+          </label>
+          
+          <label for="change-passowrd"> New Password
+            <input type="password" name="passwords[new]" placeholder="New Password">
+          </label>
+          
+          
+          <input type="submit" value="Change Password">
+          
+        </div>
+      </form>
+      
+      <br>
+      <br>
+      
+    
+      <form id="sign-out">
+      
+      <button id="sign-out-btn">Sign Out!</button>
+    </form>
+
+    <!-- // build out landing page ( once  signed in) -->
+
+    
+      
+    </div>
+  </body>
+</html>
