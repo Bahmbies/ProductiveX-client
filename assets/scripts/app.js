@@ -17,14 +17,14 @@ $(() => {
   $('#password-change').on('submit', events.onPasswordChange)
   $('#view-btn').on('click', todoEvents.onIndexTodo)
   $('#productive-landing').on('submit', todoEvents.onCreateTodo)
-  // $('#productive-landing').on('submit', todoEvents.onIndexTodo)
+
   $('#refresh-btn').on('click',)
   $('#productive-landing').hide()
   $('#password-change').hide()
   $('#sign-out').hide()
   $('#container').hide()
   $('#update-form').on('submit', todoEvents.onUpdateTodo)
- // $('#delete-btn').on('submit', todoEvents.onDeleteTodo)
+
   $('body').on('click', '#todo-delete', todoEvents.onDeleteTodo)
   $('#container').text('')
 })

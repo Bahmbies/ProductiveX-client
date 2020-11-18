@@ -25,7 +25,7 @@ const index = () => {
 
 const deleteTodo = (todoId) => {
 
-    console.log('data:', todoId)
+    
     return $.ajax({
         url: config.apiUrl + '/todos/' + todoId,
         method: 'DELETE',

@@ -6,7 +6,6 @@ const getFormFields = require('../../../lib/get-form-fields')
 
 const onCreateTodo = (event) => {
     event.preventDefault()
-console.log('im creating....')
     const form = event.target
     const data = getFormFields(form)
 
@@ -36,12 +35,12 @@ const showTodo = (event) => {
 }
 
 const onDeleteTodo = (event) => {
-    console.log('event.target: ', event.target)
+
     const todoId = $(event.target).data('todo-id')
     
     $('#container').empty(todoId)
 
-    console.log('todoId: ', todoId)
+
 
     api.deleteTodo(todoId)
          .then(ui.deleteSuccess)
