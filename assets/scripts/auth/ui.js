@@ -2,6 +2,7 @@ const store = require('../store')
 
 const signUpSuccess = function (response) {
   $('#alert-msg').text('Thanks for signing up ' + response.user.email)
+  $('form').trigger('reset')
 }
 
 const signUpFailed = function () {
@@ -16,6 +17,7 @@ const signInSuccess = function (response) {
     $('#sign-out').show()
     $('#productive-landing').show()
     $('#password-change').show()
+    $('form').trigger('reset')
     
   }
   
@@ -25,6 +27,7 @@ const signInSuccess = function (response) {
   
   const passwordChangeSuccess = function (response) {
     $('#alert-msg').text('Your password has been changed')
+    $('form').trigger('reset')
   }
   
   const passwordChangeFailed = function () {
@@ -37,7 +40,7 @@ const signInSuccess = function (response) {
       $('#sign-in').show()
       $('#sign-out').hide()
       $('#productive-landing').hide()
-
+      $('form').trigger('reset')
 
 
   }
