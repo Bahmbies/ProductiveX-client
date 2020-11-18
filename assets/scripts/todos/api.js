@@ -1,16 +1,15 @@
 const store = require('../store')
 const config = require('../config')
+const { data } = require('jquery')
 
 const create = (data) => {
     return $.ajax({
         url: config.apiUrl + '/todos',
-        data: data,
         method: 'POST',
         headers: {
             Authorization: 'Bearer ' + store.user.token 
-        }
-
-
+        },
+        data
     })
 }
 
@@ -24,29 +23,35 @@ const index = () => {
     })
 }
 
-const deleteTodo = () => {
+const deleteTodo = (todoId) => {
+
+    
     return $.ajax({
-        url: config.apiUrl + '/todos/' + store.todo._id,
+        url: config.apiUrl + '/todos/' + todoId,
+        method: 'DELETE',
         headers: {
             Authorization: 'Bearer ' + store.user.token
-        },
-        method: 'DELETE'
+        }
 
     })
 }
 
 const update = (data) => {
     return $.ajax({
-        url: config.apiUrl + '/todos',
-        data: data,
+        url: config.apiUrl + '/todos/' + data.todo.id,
         method: 'PATCH',
         headers: {
             Authorization: 'Bearer ' + store.user.token 
-        }
-
-
+        },
+        data
     })
 }
+
+// const show = () => {
+//     return $.ajax({
+//         url: config.apiUrl + '/todos/' + data.todo.id 
+//     })
+// }
 
 
 module.exports = {
