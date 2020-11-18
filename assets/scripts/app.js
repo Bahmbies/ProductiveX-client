@@ -18,7 +18,7 @@ $(() => {
   $('#view-btn').on('click', todoEvents.onIndexTodo)
   $('#productive-landing').on('submit', todoEvents.onCreateTodo)
 
-  $('#refresh-btn').on('click',)
+ 
   $('#productive-landing').hide()
   $('#password-change').hide()
   $('#sign-out').hide()
